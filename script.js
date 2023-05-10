@@ -1,10 +1,12 @@
+
+
 const api_url = 'https://api.v2.emissions-api.org'
         + '/api/v2/methane/average.json'
-        + '?country=US&begin=2019-02-01&end=2019-03-01'
+        + '?country=USA&begin=2019-02-01&end=2019-03-01'
 
 const api_url2 = 'https://api.v2.emissions-api.org'
         + '/api/v2/nitrogendioxide/average.json'
-        + '?country=FR&begin=2019-02-01&end=2019-03-01'
+        + '?point=[15,23]&begin=2019-02-01&end=2019-03-01'
 
 //Testing basic plot making with US data from 2019
 fetch(api_url)
@@ -91,4 +93,15 @@ fetch(api_url)
                 }
             });
         })
-    
+
+const actions = [
+    {
+        name: 'Randomize',
+        handler(chart) {
+        chart.data.datasets.forEach(dataset => {
+            dataset.data = Utils.numbers({count: chart.data.labels.length, min: -100, max: 100});
+        });
+        chart.update();
+        }
+    }
+]
