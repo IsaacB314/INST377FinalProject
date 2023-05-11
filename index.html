@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="https://d3js.org/d3.v4.js"></script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,18 +16,23 @@
                 <div class="box">
                     <div id="data"></div>
                     <h2>Information:</h2>
-                    <h3>Different countries and their methane production.</h3>
-                    <h3>Information Problem: what countries produce the most methane and other harmful gas emissions and what can be done to stop it?</h3>
+                    <h3>This website will aim to show the averages of carbon monoxide in the atmosphere of different countries.</h3>
+                    <h3>Information Problem: what countries experience the most carbon monoxide in their atmosphere and what can be done to stop it?</h3>
                 </div>
                 
+                <div class="box">
+                    <h2></h2>
+                </div>
 
                 <div class="box">
-                    <h2>API Graph of different countries and their methane pollution output</h2>
-                    <h3>Graph will go here, using Chart.js:</h3>
-                    <canvas id="average-example"></canvas>
-                    <canvas id="average-example2"></canvas>
+                    <h2>API Graph of carbon monoxide in the atmosphere of chosen country:</h2>
+                    <form action="script.js" class="box main_form" name="resto">
+                        <label for="country">Please type in the country (3 digit country code) you would like to explore:</label>
+                        <input type="text" id="country" name="country">
+                        <button type="button" id="country_data">Generate Country Data</button>
+                    </form>
+                    <canvas id="chart"></canvas>
                     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js"></script>
-
                 </div>
             </div>
         </div>
