@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Isaac Bowman Final Project</title>
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="CSS/style.css"/>
     </head>
     <body>
         <div class="wrapper">
@@ -19,16 +19,24 @@
                     <h3>This website will aim to show the averages of carbon monoxide in the atmosphere of different countries.</h3>
                     <h3>Information Problem: what countries experience the most carbon monoxide in their atmosphere and what can be done to stop it?</h3>
                 </div>
-                
-                <div class="box">
-                    <h2>The graphs that you will explore below show air quality data from the country you have chosen for the first ten recordings in 2019.</h2>
-                    <h2>A conclusion one can make after looking at many different countries is that they all have very similar air quality in terms of carbon-monoxide.</h2>
-                    <h2>While some countries have more variation, all the countries tend to have between 0.03 and 0.04 mols per meter squared.</h2>
+                <div class="sidecontainer">
+                    <div class="left_section box">
+                        <h3>The graphs that you will explore below show air quality data from the country you have chosen for the first ten recordings in 2019.</h3>
+                        <h3>A conclusion one can make after looking at many different countries is that they all have very similar air quality in terms of carbon-monoxide.</h3>
+                        <h3>While some countries have more variation, all the countries tend to have between 0.03 and 0.04 mols per meter squared.</h3>
+                        <h3>According to NASA.gov: "Carbon monoxide plays a major role in atmospheric chemistry, and it affects the ability of the atmosphere to cleanse itself of many other polluting gases... it also takes part in the formation of lower-atmospheric (“bad”) ozone and urban smog."</h3>
+                        <a href="https://earthobservatory.nasa.gov/global-maps/MOP_CO_M">NASA Source</a>
+                    </div>
+                    <div class="right_section box">
+                        <div class="carousel_item"><img id="smog" src="images/smog.jpg" alt="An image of a city filled with smog"/></div>
+                        <h3>Example of what fog looks like over a city.</h3>
+                    </div>
                 </div>
+               
 
                 <div class="box">
                     <h2>API Graph of carbon monoxide in the atmosphere of chosen country:</h2>
-                    <form action="script.js" class="box main_form" name="resto">
+                    <form action="JS/script.js" class="box main_form" name="resto">
                         <label for="country">Please type in the country (3 digit country code) you would like to explore:</label>
                         <input type="text" id="country" name="country">
                         <h2>Please press enter when you have typed in country code.</h2>
@@ -36,9 +44,11 @@
                     <canvas id="chart"></canvas>
                     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js"></script>
                 </div>
+                    
+                
             </div>
         </div>
         <footer class="footer">IsaacB314 <a href="https://github.com/IsaacB314">My Github Account</a></footer>
-        <script type="module" src="./script.js"></script>
+        <script type="module" src="./JS/script.js"></script>
     </body>
 </html>
